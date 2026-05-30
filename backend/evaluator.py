@@ -8,6 +8,6 @@ class SimpleTextEvaluator:
         Sau này bạn có thể thay bằng logic PyTorch tại đây.
         """
         # Chuyển về chữ thường để dễ tìm kiếm tương đối
-        if "bình luận" in text.lower():
+        if "đã lưu" in text.lower():
             return True
         return False

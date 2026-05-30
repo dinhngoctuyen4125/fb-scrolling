@@ -38,9 +38,12 @@ function sendToPython(element) {
 }
 
 function scanFacebook() {
-    const textElements = document.querySelectorAll('span, p, div[dir="auto"]'); 
+    const textElements = document.querySelectorAll('div[dir="auto"]'); 
     textElements.forEach(element => {
-        sendToPython(element);
+        const parentArticle = element.closest('div[role="article"]');
+        if (parentArticle) {            
+            sendToPython(element);
+        }
     });
 }
 
